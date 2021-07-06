@@ -84,25 +84,6 @@ void timer(int) {
 
 		}
 	}
-
-	// Tree Animation
-	{
-
-		if (treeAnimation < 5 && !treeAnimationLeft) {
-			treeAnimation += 0.2;
-		}
-		else {
-			treeAnimationLeft = true;
-		}
-
-		if (treeAnimation > -5 && treeAnimationLeft) {
-			treeAnimation -= 0.2;
-		}
-		else {
-			treeAnimationLeft = false;
-		}
-	}
-
 	glutPostRedisplay();
 
 }

@@ -7,9 +7,6 @@
 
 GLuint _textureID;
 
-float treeAnimation = 0;
-float treeAnimationLeft = true;
-
 bool sunlightAutoMovement = false;
 float sunlightPosition = 0;
 
@@ -364,33 +361,33 @@ public:
 		glEnd();
 
 		glBegin(GL_QUADS);
-		glVertex3f(startPoint - 20 + treeAnimation, 180, zPoint + 40);
-		glVertex3f(startPoint + 20 + treeAnimation, 180, zPoint + 40);
-		glVertex3f(startPoint + 20 + treeAnimation, 180, zPoint - 40);
-		glVertex3f(startPoint - 20 + treeAnimation, 180, zPoint - 40);
+		glVertex3f(startPoint - 20 , 180, zPoint + 40);
+		glVertex3f(startPoint + 20 , 180, zPoint + 40);
+		glVertex3f(startPoint + 20 , 180, zPoint - 40);
+		glVertex3f(startPoint - 20 , 180, zPoint - 40);
 		glEnd();
 
 		glBegin(GL_QUADS);
 		glColor3ub(27, 78, 24);
 		glVertex3f(startPoint - 20, 90, zPoint + 40);
 		glColor3ub(19, 51, 17);
-		glVertex3f(startPoint - 20 + treeAnimation, 180, zPoint + 40);
-		glVertex3f(startPoint - 20 + treeAnimation, 180, zPoint - 40);
+		glVertex3f(startPoint - 20 , 180, zPoint + 40);
+		glVertex3f(startPoint - 20 , 180, zPoint - 40);
 		glVertex3f(startPoint - 20, 90, zPoint - 40);
 		glEnd();
 
 		glBegin(GL_QUADS);
 		glVertex3f(startPoint + 20, 90, zPoint + 40);
-		glVertex3f(startPoint + 20 + treeAnimation, 180, zPoint + 40);
-		glVertex3f(startPoint + 20 + treeAnimation, 180, zPoint - 40);
+		glVertex3f(startPoint + 20 , 180, zPoint + 40);
+		glVertex3f(startPoint + 20 , 180, zPoint - 40);
 		glVertex3f(startPoint + 20, 90, zPoint - 40);
 		glEnd();
 
 		glBegin(GL_QUADS);
 		glVertex3f(startPoint - 20, 90, zPoint - 40);
 		glVertex3f(startPoint + 20, 90, zPoint - 40);
-		glVertex3f(startPoint + 20 + treeAnimation, 180, zPoint - 40);
-		glVertex3f(startPoint - 20 + treeAnimation, 180, zPoint - 40);
+		glVertex3f(startPoint + 20 , 180, zPoint - 40);
+		glVertex3f(startPoint - 20 , 180, zPoint - 40);
 		glEnd();
 
 		glBegin(GL_QUADS);
@@ -398,8 +395,8 @@ public:
 		glVertex3f(startPoint - 20, 90, zPoint + 40);
 		glColor3ub(19, 51, 17);
 		glVertex3f(startPoint + 20, 90, zPoint + 40);
-		glVertex3f(startPoint + 20 + treeAnimation, 180, zPoint + 40);
-		glVertex3f(startPoint - 20 + treeAnimation, 180, zPoint + 40);
+		glVertex3f(startPoint + 20 , 180, zPoint + 40);
+		glVertex3f(startPoint - 20 , 180, zPoint + 40);
 		glEnd();
 	}
 

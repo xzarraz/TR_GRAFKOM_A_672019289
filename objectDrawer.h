@@ -40,25 +40,25 @@ public:
 
 		//belakang
 		glBegin(GL_POLYGON);
-		glVertex3f(-825.0, 0.0, -800.0);
-		glVertex3f(400.0, 0.0, -800.0);
-		glVertex3f(400.0, 50.0, -800.0);
-		glVertex3f(-825.0, 50.0, -800.0);
+		glVertex3f(-825.0, 0.0, -1000.0);
+		glVertex3f(400.0, 0.0, -1000.0);
+		glVertex3f(400.0, 50.0, -1000.0);
+		glVertex3f(-825.0, 50.0, -1000.0);
 		glEnd();
 
 		//kanan
 		glBegin(GL_POLYGON);
-		glVertex3f(400.0, 0.0, -800.0);
+		glVertex3f(400.0, 0.0, -1000.0);
 		glVertex3f(400.0, 0.0, 600.0);
 		glVertex3f(400.0, 50.0, 600.0);
-		glVertex3f(400.0, 50.0, -800.0);
+		glVertex3f(400.0, 50.0, -1000.0);
 		glEnd();
 
 		//kiri
 		glBegin(GL_POLYGON);
 		glVertex3f(-900.0, 0.0, 600.0);
-		glVertex3f(-1125.0, 0.0, -800.0);
-		glVertex3f(-1125.0, 50.0, -800.0);
+		glVertex3f(-1125.0, 0.0, -1000.0);
+		glVertex3f(-1125.0, 50.0, -1000.0);
 		glVertex3f(-900.0, 50.0, 600.0);
 		glEnd();
 
@@ -66,8 +66,8 @@ public:
 		glBegin(GL_POLYGON);
 		glVertex3f(-900.0, 0.0, 600.0);
 		glVertex3f(400.0, 0.0, 600.0);
-		glVertex3f(400.0, 0.0, -800.0);
-		glVertex3f(-1125.0, 0.0, -800.0);
+		glVertex3f(400.0, 0.0, -1000.0);
+		glVertex3f(-1125.0, 0.0, -1000.0);
 		glEnd();
 
 		//atas
@@ -75,8 +75,8 @@ public:
 		glColor3f(0.05, 0.63, 0);
 		glVertex3f(-900.0, 50.0, 600.0);
 		glVertex3f(400.0, 50.0, 600.0);
-		glVertex3f(400.0, 50.0, -800.0);
-		glVertex3f(-1125.0, 50.0, -800.0);
+		glVertex3f(400.0, 50.0, -1000.0);
+		glVertex3f(-1125.0, 50.0, -1000.0);
 		glEnd();
 
 	}
@@ -403,32 +403,15 @@ public:
 	void street() {
 
 		glBegin(GL_QUADS);
-		glColor3ubv(color.lightstreet);
+		glColor3ubv(color.street);
 		glVertex3f(-930.0, 55.0, 360.0);
 		glColor3ubv(color.street);
 		glVertex3f(400.0, 55.0, 400.0);
 		glColor3ubv(color.street);
 		glVertex3f(400.0, 55.0, 520.0);
-		glColor3ubv(color.lightstreet);
+		glColor3ubv(color.street);
 		glVertex3f(-920.0, 55.0, 480.0);
 		glEnd();
-
-		float width = 35.0f;
-		float margin = 80.0f;
-		float deltaZ = 0.0f;
-		float startPoint = -800.0f;
-		for (int i = 0; i < 16; i++) {
-			glBegin(GL_QUADS);
-			glColor3fv(color.white);
-			glVertex3f(startPoint, 56.0, 410.0 + deltaZ);
-			glVertex3f(startPoint - width, 56.0, 410.0 + deltaZ);
-			glVertex3f(startPoint - width, 56.0, 420.0 + deltaZ);
-			glVertex3f(startPoint, 56.0, 420.0 + deltaZ);
-			glEnd();
-
-			startPoint += margin;
-			deltaZ += 2.75;
-		}
 	}
 
 

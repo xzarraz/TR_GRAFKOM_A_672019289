@@ -97,10 +97,10 @@ public:
 
 		//depan
 		glBegin(GL_POLYGON);
-		glVertex3f(-500.0, 55.0, -400.0);
-		glVertex3f(-25.0, 55.0, -400.0);
-		glVertex3f(-25.0, 350.0, -400.0);
-		glVertex3f(-500.0, 350.0, -400.0);
+		glVertex3f(-500.0, 55.0, 100.0);
+		glVertex3f(-25.0, 55.0, 100.0);
+		glVertex3f(-25.0, 350.0, 100.0);
+		glVertex3f(-500.0, 350.0, 100.0);
 		glEnd();
 
 		//belakang
@@ -114,16 +114,16 @@ public:
 		//kanan
 		glBegin(GL_POLYGON);
 		glVertex3f(-25.0, 55.0, -750.0);
-		glVertex3f(-25.0, 55.0, -400.0);
-		glVertex3f(-25.0, 350.0, -400.0);
+		glVertex3f(-25.0, 55.0, 100.0);
+		glVertex3f(-25.0, 350.0, 100.0);
 		glVertex3f(-25.0, 350.0, -750.0);
 		glEnd();
 
 		//kiri
 		glBegin(GL_POLYGON);
 		glVertex3f(-500.0, 55.0, -750.0);
-		glVertex3f(-500.0, 55.0, -400.0);
-		glVertex3f(-500.0, 350.0, -400.0);
+		glVertex3f(-500.0, 55.0, 100.0);
+		glVertex3f(-500.0, 350.0, 100.0);
 		glVertex3f(-500.0, 350.0, -750.0);
 		glEnd();
 
@@ -132,8 +132,8 @@ public:
 		glBegin(GL_POLYGON);
 		glVertex3f(-25.0, 350.0, -750.0);
 		glVertex3f(-500.0, 350.0, -750.0);
-		glVertex3f(-500.0, 350.0, -400.0);
-		glVertex3f(-25.0, 350.0, -400.0);
+		glVertex3f(-500.0, 350.0, 100.0);
+		glVertex3f(-25.0, 350.0, 100.0);
 		glEnd();
 
 		//detail
@@ -150,10 +150,10 @@ public:
 		float spacingB = -350.0;
 		for (int i = 0; i < 5; i++) {
 			glBegin(GL_POLYGON);
-			glVertex3f(spacing, 75.0, -399.3);
-			glVertex3f(spacingB, 75.0, -399.3);
-			glVertex3f(spacingB, 350.0, -399.3);
-			glVertex3f(spacing, 350.0, -399.3);
+			glVertex3f(spacing, 75.0, 100.3);//jendela depan
+			glVertex3f(spacingB, 75.0, 100.3);
+			glVertex3f(spacingB, 350.0, 100.3);
+			glVertex3f(spacing, 350.0, 100.3);
 			glEnd();
 
 			spacing += 65.0;
@@ -164,11 +164,12 @@ public:
 		float spacingD = 325.0;
 		for (int i = 0; i < 3; i++) {
 			glBegin(GL_POLYGON);
-			glVertex3f(-500.0, spacingC, -399.1);
-			glVertex3f(-25.0, spacingC, -399.1);
-			glVertex3f(-25.0, spacingD, -399.1);
-			glVertex3f(-500.0, spacingD, -399.1);
+			glVertex3f(-500.0, spacingC, 100.1);
+			glVertex3f(-500.0, spacingC, 100.1);
+			glVertex3f(-500.0, spacingD, 100.1);
+			glVertex3f(-500.0, spacingD, 100.1);
 			glEnd();
+
 
 			spacingC -= 75.0;
 			spacingD -= 75.0;
@@ -179,17 +180,24 @@ public:
 		float spacingF = 300.0;
 		for (int i = 0; i < 5; i++) {
 			glBegin(GL_POLYGON);
-			glVertex3f(-500.5, spacingE, -700.0);
-			glVertex3f(-500.5, spacingE, -450.0);
-			glVertex3f(-500.5, spacingF, -450.0);
-			glVertex3f(-500.5, spacingF, -700.0);
+			glVertex3f(-500.5, spacingE, 100.0);//jendela kanan
+			glVertex3f(-500.5, spacingE, -750.0);
+			glVertex3f(-500.5, spacingF, -750.0);
+			glVertex3f(-500.5, spacingF, 100.0);
 			glEnd();
 
 			glBegin(GL_POLYGON);
-			glVertex3f(-24.5, spacingE, -700.0);
-			glVertex3f(-24.5, spacingE, -450.0);
-			glVertex3f(-24.5, spacingF, -450.0);
-			glVertex3f(-24.5, spacingF, -700.0);
+			glVertex3f(-500.0, spacingE, 100.1);//jendela depan
+			glVertex3f(-25.0, spacingE, 100.1);
+			glVertex3f(-25.0, spacingF, 100.1);
+			glVertex3f(-500.0, spacingF, 100.1);
+			glEnd();
+
+			glBegin(GL_POLYGON);
+			glVertex3f(-24.5, spacingE, 100.0);
+			glVertex3f(-24.5, spacingE, -750.0);//jendela kiri 
+			glVertex3f(-24.5, spacingF, -750.0);
+			glVertex3f(-24.5, spacingF, 100.0);
 			glEnd();
 
 			spacingE -= 50.0;
@@ -235,8 +243,8 @@ public:
 		//detail atas
 		glColor3fv(color.grey);
 		glBegin(GL_POLYGON);
-		glVertex3f(-400.0, 350.5, -700.0);
-		glVertex3f(-450.0, 350.5, -700.0);
+		glVertex3f(-400.0, 350.5, 50.0);
+		glVertex3f(-450.0, 350.5, 50.0);
 		glVertex3f(-450.0, 350.5, -450.0);
 		glVertex3f(-400.0, 350.5, -450.0);
 		glEnd();

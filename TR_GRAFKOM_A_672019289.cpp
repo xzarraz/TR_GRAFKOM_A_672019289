@@ -27,62 +27,6 @@ void reshape(int width, int height) {
 
 void timer(int) {
 	glutTimerFunc(1000 / 30, timer, 0);
-	// Car
-	{
-		for (int i = 0; i < 5; i++) {
-			carPositionX[i] -= carSpeed[i];
-			for (int j = 0; j < 5; j++) {
-				float range = carPositionX[i] - carPositionX[j];
-				if (carPositionZ[i] == carPositionZ[j]) {
-					if (abs(range) < 50 && i != j) {
-						if (carSpeed[i] == 0) {
-							carSpeed[i] = carSpeed[j];
-						}
-						else {
-							if (carPositionX[i] > -300) {
-								if (carPositionZ[i] == 400) {
-									carPositionZ[i] = 475;
-									break;
-								}
-								else {
-									carPositionZ[i] = 400;
-									break;
-								}
-							}
-							else {
-								carSpeed[i] = carSpeed[j];
-								break;
-							}
-						}
-					}
-					if (abs(range) < 40 && abs(range) > -40 && i != j) {
-						if (carSpeed[i] > 0.0) {
-							carSpeed[i] -= 0.002;
-						}
-						else {
-							break;
-						}
-					}
-				}
-			}
-
-
-			if (carPositionX[i] < -415 && carPositionX[i] > -470) {
-				carSpeed[i] = 0;
-			}
-
-			if (carPositionX[i] < -415 && carPositionX[i] > -470) {
-				carSpeed[i] = rand() % ((4 - 2) + 1) + 2;
-			}
-
-			if (carPositionX[i] < -960) {
-				carPositionX[i] = 380;
-				carSpeed[i] = rand() % ((4 - 2) + 1) + 2;
-				carColor[i] = rand() % ((8 - 1) + 1) + 1;
-			}
-
-		}
-	}
 	glutPostRedisplay();
 
 }
@@ -178,11 +122,6 @@ void keyFun(unsigned char key, int x, int y) {
 		break;
 	case 'e':
 		glRotatef(-5.0, 0.0, 0.0, 1.0);
-		break;
-	case 'p':
-		for (int i = 0; i < 5; i++) {
-			carSpeed[i] = 3;
-		}
 		break;
 		// moving z point
 	case 't':

@@ -5,18 +5,10 @@
 
 #define deltat .001
 
-
-bool redOn = true;
-bool yellowOn = false;
-bool greenOn = false;
-
-float redLight = 1000, yellowLight = 0, greenLight = 0;
-
-float carSpeed[5] = { 3, 3, 3, 3, 3 };
-float carPositionX[5] = { 0, 300, 600, 600, 1200 };
+float carPositionX[5] = { -900, -800, -600, -400, -200 };
 float carPositionZ[5] = { 400, 475, 400, 475, 400 };
 float carColor[5] = { 1 , 1 , 3, 4, 4 };
-float deltaCar[5] = { 0,0,0,0,0 };
+
 
 class myObject {
 

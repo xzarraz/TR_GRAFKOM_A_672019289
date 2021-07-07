@@ -137,7 +137,6 @@ void display() {
 	obj.myTree(-900.0, -900);
 
 	obj.street();
-	obj.billboard();
 
 	obj.carObject(carPositionX[0], carPositionZ[0], carColor[0]);
 	obj.carObject(carPositionX[1], carPositionZ[1], carColor[1]);
@@ -180,57 +179,6 @@ void keyFun(unsigned char key, int x, int y) {
 		break;
 	case 'e':
 		glRotatef(-5.0, 0.0, 0.0, 1.0);
-		break;
-
-		// enable manual lighting
-	case 'r':
-		if (!config.manualLighting) {
-			config.manualLighting = true;
-			sunlightAutoMovement = false;
-			cout << "Manual Lighting enabled!" << endl;
-		}
-		else {
-			config.manualLighting = false;
-			GLfloat position[] = { 400.0f, 100.0f, 500.0f, 0.5 };
-			glLightfv(GL_LIGHT0, GL_POSITION, position);
-			cout << "Manual Lighting disabled!" << endl;
-		}
-		break;
-
-	case 'g':
-		if (!sunlightAutoMovement) {
-			sunlightAutoMovement = true;
-			cout << "Auto movement lighting enabled!" << endl;
-		}
-		else {
-			GLfloat position[] = { 400.0f, 100.0f, 500.0f, 0.5 };
-			glLightfv(GL_LIGHT0, GL_POSITION, position);
-			sunlightAutoMovement = false;
-			cout << "Auto movement lighting disabled!" << endl;
-		}
-		break;
-
-	case 'n':
-		if (config.nightMode) {
-			config.nightMode = false;
-		}
-		else {
-			config.nightMode = true;
-		}
-		break;
-
-	case 'f':
-		if (!config.fscreen) {
-			glutFullScreen();
-			config.fscreen = true;
-			cout << "Fullscreen enabled!" << endl;
-		}
-		else {
-			config.fscreen = false;
-			glutReshapeWindow(config.width, config.height);
-			glutPositionWindow(config.windowPositionX, config.windowPositionY);
-			cout << "Fullscreen disabled!" << endl;
-		}
 		break;
 	case 'p':
 		for (int i = 0; i < 5; i++) {
@@ -346,7 +294,6 @@ void myinit() {
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
 
-	_textureID = loadBMPImage("./university-of-lausanne.bmp");
 }
 
 int main(int argc, char** argv) {
@@ -371,11 +318,7 @@ int main(int argc, char** argv) {
 	cout << " > Press arrow button to translate the object" << endl;
 	cout << " > Press 1 or scroll up your mouse to increase scale" << endl;
 	cout << " > Press 2 or scroll up your mouse to decrease scale" << endl;
-	cout << " > Press r to enable/disable manual lighting" << endl;
-	cout << " > Press g to enable/disable auto movement lighting" << endl;
-	cout << " > Press t/y to adjust the depth of lighting" << endl;
 	cout << " > Press left click and hold your mouse to rotate the object" << endl;
-	cout << " > Press f to toggle fullscreen" << endl << endl;
 
 	myinit();
 	glutMainLoop();

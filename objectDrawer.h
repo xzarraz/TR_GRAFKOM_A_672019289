@@ -85,34 +85,34 @@ public:
 
 		//bawah
 		glBegin(GL_POLYGON);
-		glVertex3f(-25.0, 55.0, -750.0);
+		glVertex3f(125.0, 55.0, -750.0);
 		glVertex3f(-500.0, 55.0, -750.0);
 		glVertex3f(-500.0, 55.0, -600.0);
-		glVertex3f(-25.0, 55.0, -600.0);
+		glVertex3f(125.0, 55.0, -600.0);
 		glEnd();
 
 		//depan
 		glBegin(GL_POLYGON);
 		glVertex3f(-500.0, 55.0, 100.0);
-		glVertex3f(-25.0, 55.0, 100.0);
-		glVertex3f(-25.0, 350.0, 100.0);
+		glVertex3f(125.0, 55.0, 100.0);
+		glVertex3f(125.0, 350.0, 100.0);
 		glVertex3f(-500.0, 350.0, 100.0);
 		glEnd();
 
 		//belakang
 		glBegin(GL_POLYGON);
-		glVertex3f(-25.0, 55.0, -750.0);
+		glVertex3f(125.0, 55.0, -750.0);
 		glVertex3f(-500.0, 55.0, -750.0);
 		glVertex3f(-500.0, 350.0, -750.0);
-		glVertex3f(-25.0, 350.0, -750.0);
+		glVertex3f(125.0, 350.0, -750.0);
 		glEnd();
 
 		//kanan
 		glBegin(GL_POLYGON);
-		glVertex3f(-25.0, 55.0, -750.0);
-		glVertex3f(-25.0, 55.0, 100.0);
-		glVertex3f(-25.0, 350.0, 100.0);
-		glVertex3f(-25.0, 350.0, -750.0);
+		glVertex3f(125.0, 55.0, -750.0);
+		glVertex3f(125.0, 55.0, 100.0);
+		glVertex3f(125.0, 350.0, 100.0);
+		glVertex3f(125.0, 350.0, -750.0);
 		glEnd();
 
 		//kiri
@@ -126,18 +126,18 @@ public:
 		glColor3f(0.9, 0.9, 0.9);
 		//atas
 		glBegin(GL_POLYGON);
-		glVertex3f(-25.0, 350.0, -750.0);
+		glVertex3f(125.0, 350.0, -750.0);
 		glVertex3f(-500.0, 350.0, -750.0);
 		glVertex3f(-500.0, 350.0, 100.0);
-		glVertex3f(-25.0, 350.0, 100.0);
+		glVertex3f(125.0, 350.0, 100.0);
 		glEnd();
 
 		//detail
 		glColor3fv(color.glass);
 		glBegin(GL_POLYGON);
 		glVertex3f(-450.0, 100.0, -399.5);
-		glVertex3f(-50.0, 100.0, -399.5);
-		glVertex3f(-50.0, 300.0, -399.5);
+		glVertex3f(100.0, 100.0, -399.5);
+		glVertex3f(100.0, 300.0, -399.5);
 		glVertex3f(-450.0, 300.0, -399.5);
 		glEnd();
 
@@ -190,10 +190,10 @@ public:
 			glEnd();
 
 			glBegin(GL_POLYGON);
-			glVertex3f(-24.5, spacingE, 100.0);
-			glVertex3f(-24.5, spacingE, -750.0);//jendela kiri 
-			glVertex3f(-24.5, spacingF, -750.0);
-			glVertex3f(-24.5, spacingF, 100.0);
+			glVertex3f(126.5, spacingE, 100.0);
+			glVertex3f(126.5, spacingE, -750.0);//jendela kiri 
+			glVertex3f(126.5, spacingF, -750.0);
+			glVertex3f(126.5, spacingF, 100.0);
 			glEnd();
 
 			spacingE -= 50.0;

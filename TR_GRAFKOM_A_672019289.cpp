@@ -5,7 +5,6 @@
 #include <time.h> 
 #include <cmath>
 
-#include "loadImage.h";
 #include "objectDrawer.h";
 #include "colorOption.h";
 #include "myConfiguration.h";
@@ -312,13 +311,6 @@ int main(int argc, char** argv) {
 	glutTimerFunc(0, timer, 0);
 	glutMouseWheelFunc(mouseWheel);
 	glutPassiveMotionFunc(mouseMotionActive);
-
-	cout << " << Hint <<" << endl << endl;
-	cout << " > Press W, A, S, D to rotate the object" << endl;
-	cout << " > Press arrow button to translate the object" << endl;
-	cout << " > Press 1 or scroll up your mouse to increase scale" << endl;
-	cout << " > Press 2 or scroll up your mouse to decrease scale" << endl;
-	cout << " > Press left click and hold your mouse to rotate the object" << endl;
 
 	myinit();
 	glutMainLoop();

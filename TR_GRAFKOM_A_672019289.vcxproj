@@ -151,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="colorOption.h" />
-    <ClInclude Include="loadImage.h" />
     <ClInclude Include="myConfiguration.h" />
     <ClInclude Include="objectDrawer.h" />
   </ItemGroup>

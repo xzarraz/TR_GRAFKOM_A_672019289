@@ -5,10 +5,6 @@
 
 #define deltat .001
 
-GLuint _textureID;
-
-bool sunlightAutoMovement = false;
-float sunlightPosition = 0;
 
 bool redOn = true;
 bool yellowOn = false;
